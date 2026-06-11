@@ -1,0 +1,365 @@
+/* GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER + MENU */
+
+header {
+    background-color: #db2c2c;
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4f0070;
+}
+
+/* SECÇÔES GERAIS */
+
+.fullscreen-bg {
+    height: 100vh;
+    background: url("../imagens/imagem-de-fundo.webp") center/cover no-repeat;
+    position: relative;
+    padding: 60px;
+    color: #ffffff;
+}
+
+/* Overlay para melhorar contraste */
+.fullscreen-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    max-width: 600px;
+    color: #ffffff;
+    z-index: 2;
+    text-align
+}
+
+/* Wrapper para alinhar texto + imagem */
+.conteudo-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Texto */
+.texto-top-right {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Imagem lateral */
+.imagem-lateral {
+    flex: 1;
+}
+
+.imagem-lateral img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Botão */
+.btn-wrapper {
+    margin-top: 30px;
+    text-align:center;
+    position: relative;
+    z-index: 2; /* garante que fica acima da imagem de fundo */
+}
+
+.btn-saber-mais {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #540095;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-saber-mais:hover {
+    background: #fa3b3b;
+}
+
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .conteudo-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-lateral img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* SERVIÇOS */
+
+.servicos{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.tabela-servicos {
+    width: 100%;
+    margin-top: 100px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.tabela-servicos th {
+    background: #0c0c0c;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.tabela-servicos td {
+    padding: 12px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.btn-wrapper {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* garante que fica acima da imagem de fundo */
+}
+
+.btn-saber-mais {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #540095;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-saber-mais:hover {
+    background: #fa3b3b;
+}
+
+
+/* Secção com imagem de fundo */
+
+.contactos-bg {
+    background-image: url('../imagens/imagem-de-fundo.webp'); /* altera para a tua imagem */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contentor central */
+.contactos-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.55); /* fundo semitransparente */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    color: #fff;
+}
+
+/* Formulário */
+.contactos-form {
+    flex: 1 1 350px;
+}
+
+.contactos-form h2 {
+    margin-bottom: 20px;
+}
+
+.contactos-form input,
+.contactos-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+}
+
+.contactos-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4b4b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contactos-form button:hover {
+    background: #e63e3e;
+}
+
+/* Informações de contacto */
+.info-contactos {
+    flex: 1 1 250px;
+}
+
+.info-contactos a {
+    color: #ff4b4b;
+    text-decoration: none;
+}
+
+/* Redes sociais */
+.redes-sociais {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* CONTACTOS */
+
+.info-contactos {
+    margin-top: 40px;
+}
+
+.info-contactos a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.redes-sociais a {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #50028d;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+footer a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social .social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    background: #ff4b4b;
+    color: #fff;
+}
+
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-banner h1 {
+        font-size: 32px;
+    }
+}
